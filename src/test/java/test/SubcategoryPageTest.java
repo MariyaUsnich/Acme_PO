@@ -23,7 +23,7 @@ public class SubcategoryPageTest extends TestBase{
     void NameOrderTest() {
         SubcategoryPage subcategoryPage = new SubcategoryPage(driver);
         subcategoryPage.clickSubcategory();
-        driver.findElement(By.cssSelector("[href='https://litecart.stqa.ru/en/rubber-ducks-c-1/subcategory-c-2/?category_id=2&page=1&sort=name']")).click();
+        subcategoryPage.selectByName();
         List<WebElement> elements = driver.findElements(By.className("name"));
         List<WebElement> example = new ArrayList<>(2);
         WebElement yellowDuck = driver.findElement(By.xpath("//div[@class='name'][text()='Yellow Duck']"));
@@ -39,7 +39,7 @@ public class SubcategoryPageTest extends TestBase{
     {
         SubcategoryPage subcategoryPage = new SubcategoryPage(driver);
         subcategoryPage.clickSubcategory();
-        driver.findElement(By.xpath("//*[@id=\"box-category\"]/nav/span")).click();
+        subcategoryPage.selectByPrice();
         List<WebElement> elements = driver.findElements(By.className("name"));
         List<WebElement> example = new ArrayList<>(2);
         WebElement yellowDuck = driver.findElement(By.xpath("//div[@class='name'][text()='Yellow Duck']"));

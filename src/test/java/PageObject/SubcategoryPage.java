@@ -1,5 +1,6 @@
 package PageObject;
 
+import PageObject.Helpers.WebDriverContainer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,12 +20,14 @@ public class SubcategoryPage {
 
     private By newLabelLocator = By.cssSelector("div.sticker.new");
 
+    private By priceLocator = By.xpath("//*[text()='Price']");
+
+    private By nameLocator = By.cssSelector("[href='https://litecart.stqa.ru/en/rubber-ducks-c-1/subcategory-c-2/?category_id=2&page=1&sort=name']");
+
 
     private WebDriver driver;
 
-    public SubcategoryPage(WebDriver driver) {
-        this.driver = driver;
-    }
+    public SubcategoryPage(WebDriver driver){this.driver = driver;}
 
     public void clickSubcategory() {
         Actions builder = new Actions(driver);
@@ -46,6 +49,15 @@ public class SubcategoryPage {
             return getGreenDuckelement().findElement(newLabelLocator);
     }
 
+    public void selectByName() {
+        driver.findElement(nameLocator).click();
+    }
+
+    public void selectByPrice() {
+        driver.findElement(priceLocator).click();
+    }
    }
+
+
 
 

@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebDriverContainer {
-
    private static WebDriver driver;
 
     public static void initDriver(){
@@ -12,8 +11,7 @@ public class WebDriverContainer {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
-    }
-
+   }
     public static WebDriver getDriver(){
         return driver;
     }

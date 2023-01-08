@@ -1,6 +1,7 @@
 package PageObject;
 
 import PageObject.Helpers.Locators;
+import PageObject.Helpers.WebDriverContainer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,9 +14,8 @@ public class HomePageLocators {
 
     private WebDriver driver;
 
-    public HomePageLocators(WebDriver driver) {
-        this.driver = driver;
-    }
+    public HomePageLocators(WebDriver driver) {this.driver = driver;}
+
     public void returnToHomePage() {
         driver.findElement(homePageButtonLocator).click();
     }
