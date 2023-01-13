@@ -81,7 +81,7 @@
             <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
           </property>
         </properties>
-        <testFailureIgnore>false</testFailureIgnore>
+     <testFailureIgnore>false</testFailureIgnore>
         <reuseForks>true</reuseForks>
         <forkCount>0</forkCount>
         <argLine>
@@ -90,20 +90,20 @@
         </argLine>
         <systemPropertyVariables>
           <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
-          <rp.endpoint>https://demo.reportportal.io</rp.endpoint>
-          <rp.uuid>8b961f64-9ea8-41e8-942b-c86e512498b1</rp.uuid>
-          <rp.launch>Rubber Ducks Test</rp.launch>
-          <rp.project>mariyausnich_personal</rp.project>
-        </systemPropertyVariables>
-      </configuration>
+             <rp.endpoint>https://demo.reportportal.io</rp.endpoint>
+             <rp.uuid>8b961f64-9ea8-41e8-942b-c86e512498b1</rp.uuid>
+             <rp.launch>Rubber Ducks Test</rp.launch>
+             <rp.project>mariyausnich_personal</rp.project>
+           </systemPropertyVariables>
+         </configuration>
       <dependencies>
-        <dependency>
-          <groupId>org.aspectj</groupId>
-          <artifactId>aspectjweaver</artifactId>
-          <version>${aspectj.version}</version>
-        </dependency>
-      </dependencies>
-    </plugin>
-  </plugins>
-  </build>
-</project>
+         <dependency>
+           <groupId>org.aspectj</groupId>
+           <artifactId>aspectjweaver</artifactId>
+           <version>${aspectj.version}</version>
+         </dependency>
+       </dependencies>
+     </plugin>
+   </plugins>
+   </build>
+ </project>
